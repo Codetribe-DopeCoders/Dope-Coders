@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:background="@color/icons"
+    tools:context="com.example.codetribe.palliate.MainActivity">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/palliate_logo" />
+
+    <EditText
+        android:id="@+id/login_email"
+        android:inputType="textEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email Address" />
+
+    <EditText
+        android:id="@+id/login_passord"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password" />
+
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/icons"
+        android:background="@drawable/button3"
+        android:layout_gravity="center_horizontal"
+        android:text="LOGIN" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingTop="5dp"
+        android:text="OR" />
+
+    <Button
+        android:id="@+id/login_facebook"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/icons"
+        android:background="@drawable/button2"
+        android:layout_gravity="center_horizontal"
+        android:text="LOGIN with facebook" />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:textSize="10dp"
+        android:textColor="@color/primary_text"
+        android:layout_gravity="center_horizontal"
+        android:text="NEED AN ACCOUNT?" />
+
+    <Button
+        android:id="@+id/register1"
+        android:layout_width="150dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button1"
+        android:layout_height="35dp"
+        android:textColor="@color/icons"
+        android:layout_gravity="center_horizontal"
+        android:text="Signup now" />
+
+</LinearLayout>

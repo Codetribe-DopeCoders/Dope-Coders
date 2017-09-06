@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Palliate</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_social_workers">SocialWorkers</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_life">Life</string>
+    <string name="title_activity_support">Support</string>
+</resources>

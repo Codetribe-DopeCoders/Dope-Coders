@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="ic_menu_account" type="drawable">drawable/ic_menu_account</item>
+    <item name="ic_menu_help_24dp" type="drawable">drawable/ic_menu_help_24dp</item>
+    <item name="ic_menu_slideshow" type="drawable">@android:drawable/ic_menu_slideshow</item>
+    <item name="ic_menu_about" type="drawable">drawable/ic_menu_about</item>
+    <item name="ic_menu_depression" type="drawable">drawable/ic_menu_depression</item>
+    <item name="ic_menu_send" type="drawable">@android:drawable/ic_menu_send</item>
+</resources>

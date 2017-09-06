@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_menu_account"
+            android:title="User Profile" />
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@drawable/ic_menu_help_24dp"
+            android:title="Help" />
+        <item
+            android:id="@+id/nav_life_support"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Life Support" />
+        <item
+            android:id="@+id/nav_about_us"
+            android:icon="@drawable/ic_menu_about"
+            android:title="Tips" />
+    </group>
+
+
+    <item android:title="Live Chat">
+        <menu>
+            <item
+                android:id="@+id/nav_depression"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Depression" />
+            <item
+                android:id="@+id/nav_drugs_alcohol"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Rape" />
+            <item
+                android:id="@+id/nav_abuse"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Abuse" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/nav_logout"
+        android:icon="@drawable/ic_menu_account"
+        android:title="Logout" />
+
+
+</menu>

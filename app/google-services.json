@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "717557470123",
+    "firebase_url": "https://palliate-916e4.firebaseio.com",
+    "project_id": "palliate-916e4",
+    "storage_bucket": "palliate-916e4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:717557470123:android:f5bbf1cd2fa6c3bc",
+        "android_client_info": {
+          "package_name": "com.example.codetribe.palliate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "717557470123-fs2jkjp4plj8er40hr2pgd89726cda95.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.codetribe.palliate",
+            "certificate_hash": "ebb46e0ecef6c9dab06d45e11e5f8c631b4ff83f"
+          }
+        },
+        {
+          "client_id": "717557470123-he6revado3j95nc99bjf3nvs5fuk3pr7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXZVnprauaTPjtoi4CLnkxF5WsGb3IfwQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "717557470123-he6revado3j95nc99bjf3nvs5fuk3pr7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
