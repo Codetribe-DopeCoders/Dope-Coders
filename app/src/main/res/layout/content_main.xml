@@ -16,12 +16,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="30dp"
+        android:fontFamily="sans-serif-medium"
         android:textColor="@android:color/white"
         android:gravity="center_horizontal"
         android:textStyle="bold"
         android:textSize="20dp"
-        android:textAllCaps="true"
-        android:text="suffering from\nabuse? \nclick here for help..." />
+        android:text="Suffering from Abuse? Click here for help..." />
 
     <com.example.codetribe.palliate.GifImageView
         android:layout_centerInParent="true"

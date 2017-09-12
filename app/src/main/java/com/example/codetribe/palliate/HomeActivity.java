@@ -96,8 +96,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
 
         } else if (id == R.id.nav_drugs_alcohol) {
+            startActivity(new Intent(this, Rape.class));
 
         } else if (id == R.id.nav_abuse) {
+            startActivity(new Intent(this, Abuse.class));
 
         } else if (id == R.id.nav_logout) {
 

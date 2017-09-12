@@ -61,7 +61,9 @@
         <activity
             android:name=".Depression"
             android:label="Live Chat"
-            android:parentActivityName=".HomeActivity"></activity>
+            android:parentActivityName=".HomeActivity" />
+        <activity android:name=".Rape" />
+        <activity android:name=".Abuse"></activity>
     </application>
 
 </manifest>

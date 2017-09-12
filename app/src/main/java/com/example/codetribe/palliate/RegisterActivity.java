@@ -30,7 +30,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     private EditText levelOneContacOne;
     private EditText levelTwoContactTwo;
     private EditText leve2OneContacOne;
-    private EditText leve2TwoContactTwo;
     private Button createAnAccount;
     private FirebaseAuth firebaseAuth;
     private DatabaseReference databaseReference;
@@ -63,7 +62,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         levelOneContacOne = (EditText) findViewById(R.id.register_contact1);
         levelTwoContactTwo = (EditText) findViewById(R.id.register_contact2);
         leve2OneContacOne = (EditText) findViewById(R.id.register_contact1cpf);
-        leve2TwoContactTwo = (EditText) findViewById(R.id.register_contact2cpf);
+
 
         //clickable button
         createAnAccount = (Button) findViewById(R.id.create_an_account);
@@ -106,7 +105,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         String contact1level = levelOneContacOne.getText().toString().trim();
         String contact2level = levelTwoContactTwo.getText().toString().trim();
         String contact1levelcpf = leve2OneContacOne.getText().toString().trim();
-        String contact2levelcpf = leve2TwoContactTwo.getText().toString().trim();
 
         // validate user input
 
@@ -170,12 +168,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             return;
 
         }
-        if (TextUtils.isEmpty(contact2levelcpf)) {
-
-            Toast.makeText(getApplicationContext(), "please, enter contact one in cpf numbers", Toast.LENGTH_SHORT).show();
-
-            return;
-        }
 
 
         //create user account
@@ -196,7 +188,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                     String contact1level = levelOneContacOne.getText().toString().trim();
                     String contact2level = levelTwoContactTwo.getText().toString().trim();
                     String contact1levelcpf = leve2OneContacOne.getText().toString().trim();
-                    String contact2levelcpf = leve2TwoContactTwo.getText().toString().trim();
+
 
                     String id = task.getResult().getUser().getUid();
 
@@ -205,10 +197,10 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                     Toast.makeText(getApplicationContext(), "registered successfully", Toast.LENGTH_SHORT).show();
 
                     databaseReference = databaseReference.getRef().child("User");
-                    UserDetails userDetails = new UserDetails(userNamE, email, password, userNumber, socialContacts, contact1level, contact2level, contact1levelcpf, contact2levelcpf);
+                    UserDetails userDetails = new UserDetails(userNamE, email, password, userNumber, socialContacts, contact1level, contact2level, contact1levelcpf);
                     databaseReference.child(id).setValue(userDetails);
                 } else {
-                    Toast.makeText(getApplicationContext(), "failed to regisrer user, please register again", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "failed to register user, please register again", Toast.LENGTH_SHORT).show();
                 }
             }
         });

@@ -14,11 +14,11 @@ public class UserDetails {
     private String mLevelOneContacOne;
     private String mLevelTwoContactTwo;
     private String mLeve2OneContacOne;
-    private String mLeve2TwoContactTwo;
+
 
 
     //user details public constructor
-    public UserDetails(String mUserName, String mMail, String mPasswors, String mContactNumber, String mSocialNumber, String mLevelOneContacOne, String mLevelTwoContactTwo, String mLeve2OneContacOne, String mLeve2TwoContactTwo) {
+    public UserDetails(String mUserName, String mMail, String mPasswors, String mContactNumber, String mSocialNumber, String mLevelOneContacOne, String mLevelTwoContactTwo, String mLeve2OneContacOne) {
         this.mUserName = mUserName;
         this.mMail = mMail;
         this.mPasswors = mPasswors;
@@ -27,7 +27,7 @@ public class UserDetails {
         this.mLevelOneContacOne = mLevelOneContacOne;
         this.mLevelTwoContactTwo = mLevelTwoContactTwo;
         this.mLeve2OneContacOne = mLeve2OneContacOne;
-        this.mLeve2TwoContactTwo = mLeve2TwoContactTwo;
+
     }
 
 
@@ -99,11 +99,5 @@ public class UserDetails {
         this.mLeve2OneContacOne = mLeve2OneContacOne;
     }
 
-    public String getmLeve2TwoContactTwo() {
-        return mLeve2TwoContactTwo;
-    }
 
-    public void setmLeve2TwoContactTwo(String mLeve2TwoContactTwo) {
-        this.mLeve2TwoContactTwo = mLeve2TwoContactTwo;
-    }
 }

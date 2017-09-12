@@ -23,7 +23,7 @@
     </group>
 
 
-    <item android:title="Live Chat">
+    <item android:title="Support Chat">
         <menu>
             <item
                 android:id="@+id/nav_depression"
