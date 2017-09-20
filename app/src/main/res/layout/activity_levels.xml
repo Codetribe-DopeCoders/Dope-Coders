@@ -1,66 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:layout_editor_absoluteY="81dp"
-    tools:layout_editor_absoluteX="0dp"
-    android:paddingTop="100dp"
-    android:paddingLeft="10dp"
-    android:paddingRight="10dp"
-    tools:context="com.example.codetribe.palliate.Levels">
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.example.codetribe.palliate.Levels">
 
 
-    <br.com.bloder.magic.view.MagicButton
-        android:id="@+id/magic_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:magic_button_size="100dp"
-        app:button_icon="@drawable/green"
-        app:button_icon_width="50dp"
-        app:button_icon_height="50dp"
-        app:hide_text="Connect With Socialworker"
-        app:hide_text_size="8dp"
-        app:hide_text_color="@android:color/white"
-        app:icon_button_color="#3CB371"
-        tools:layout_editor_absoluteY="85dp"
-        tools:layout_editor_absoluteX="16dp"
-        app:expandable_area_color="#3CB371" />
-
-    <br.com.bloder.magic.view.MagicButton
-        android:id="@+id/magic_button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:magic_button_size="100dp"
-        app:button_icon="@drawable/orange"
-        app:button_icon_width="50dp"
-        app:button_icon_height="50dp"
-        app:hide_text="SMS Family and Friends"
-        app:hide_text_size="8dp"
-        app:hide_text_color="@android:color/white"
-        app:icon_button_color="#FF6347"
-        tools:layout_editor_absoluteX="16dp"
-        app:expandable_area_color="#FF6347"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/magic_button" />
-
-    <br.com.bloder.magic.view.MagicButton
-        android:id="@+id/magic_button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:magic_button_size="100dp"
-        app:button_icon="@drawable/red"
-        app:button_icon_width="50dp"
-        app:button_icon_height="50dp"
-        app:hide_text="Connect With CPF"
-        app:hide_text_size="8dp"
-        app:hide_text_color="@android:color/white"
-        app:icon_button_color="#FF0000"
-        tools:layout_editor_absoluteX="16dp"
-        app:expandable_area_color="#FF0000"
-        android:layout_marginTop="117dp"
-        app:layout_constraintTop_toBottomOf="@+id/magic_button" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.17"
+            android:orientation="vertical"
+            tools:context="za.co.mamoletu.register.MainActivity">
 
 
-</android.support.constraint.ConstraintLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.06"
+            android:orientation="vertical"
+            tools:context="za.co.mamoletu.register.MainActivity">
+
+
+            <Button
+                android:id="@+id/magic_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:height="100dp"
+                android:background="@drawable/red_button"
+                android:text="@string/red_round_string"
+                android:textSize="15sp"
+                android:textColor="#ffffff" />
+
+
+            <Button
+                android:layout_marginTop="20dp"
+                android:id="@+id/magic_button1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/green_round_string"
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                android:height="100dp"
+                android:background="@drawable/green_button"/>
+            <Button
+                android:layout_marginTop="20dp"
+                android:id="@+id/magic_button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/yellow_round_string"
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                android:height="100dp"
+                android:background="@drawable/yellow_button"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+

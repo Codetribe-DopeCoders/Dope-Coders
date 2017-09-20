@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.telephony.SmsManager;
 import android.view.View;
+import android.widget.Button;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -19,8 +20,7 @@ import com.google.firebase.database.ValueEventListener;
 import br.com.bloder.magic.view.MagicButton;
 
 public class Levels extends AppCompatActivity {
-
-    MagicButton magicButton, magicButton1, magicButton2;
+    Button magicButton, magicButton1, magicButton2;
     private String PhoneNum = "0762701174";
 
     DatabaseReference mDatabaseReference;
@@ -34,9 +34,9 @@ public class Levels extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_levels);
 
-        magicButton = (MagicButton) findViewById(R.id.magic_button);
-        magicButton1 = (MagicButton) findViewById(R.id.magic_button1);
-        magicButton2 = (MagicButton) findViewById(R.id.magic_button2);
+        magicButton  = (Button) findViewById(R.id.magic_button);
+        magicButton1 = (Button) findViewById(R.id.magic_button1);
+        magicButton2 = (Button) findViewById(R.id.magic_button2);
 
 
         FirebaseUser user = firebaseAuth.getInstance().getCurrentUser();
@@ -63,7 +63,7 @@ public class Levels extends AppCompatActivity {
             }
         });
 
-        magicButton.setMagicButtonClickListener(new View.OnClickListener() {
+        magicButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
               /*  String phoneNumber = "0820658463";
@@ -79,7 +79,7 @@ public class Levels extends AppCompatActivity {
             }
         });
 
-        magicButton1.setMagicButtonClickListener(new View.OnClickListener() {
+        magicButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(android.content.Intent.ACTION_VIEW);
@@ -89,7 +89,7 @@ public class Levels extends AppCompatActivity {
                 startActivity(i);
             }
         });
-        magicButton2.setMagicButtonClickListener(new View.OnClickListener() {
+        magicButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(android.content.Intent.ACTION_VIEW);
