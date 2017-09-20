@@ -194,7 +194,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                     Toast.makeText(getApplicationContext(), "registered successfully", Toast.LENGTH_SHORT).show();
 
                     databaseReference = databaseReference.getRef().child("User");
-                    UserDetails userDetails = new UserDetails(userNamE, email, password, userNumber, socialContacts, contact1level, contact2level, contact1levelcpf);
+                    UserDetails userDetails = new UserDetails(userNamE, email, password, userNumber);
                     databaseReference.child(id).setValue(userDetails);
                 } else {
                     Toast.makeText(getApplicationContext(), "failed to register user, please register again", Toast.LENGTH_SHORT).show();

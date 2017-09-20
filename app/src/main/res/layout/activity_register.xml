@@ -7,7 +7,6 @@
 
     tools:context="com.example.codetribe.palliate.RegisterActivity">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="vertical"
@@ -63,15 +62,15 @@
         android:hint="Contact No" />
 
 
-    <Button
-        android:id="@+id/create_an_account"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/height"
-        android:layout_marginTop="20dp"
-        android:textColor="@color/icons"
-        android:background="@drawable/button3"
-        android:layout_gravity="center_horizontal"
-        android:text="Create an  Account" />
+        <Button
+            android:id="@+id/create_an_account"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height"
+            android:layout_marginTop="240dp"
+            android:textColor="@color/icons"
+            android:background="@drawable/button3"
+            android:text="Create an  Account" />
     </LinearLayout>
 
 </ScrollView>
+

@@ -30,6 +30,14 @@ public class UserDetails {
 
     }
 
+    public UserDetails(String mUserName, String mMail, String mPasswors, String mContactNumber) {
+        this.mUserName = mUserName;
+        this.mMail = mMail;
+        this.mPasswors = mPasswors;
+        this.mContactNumber = mContactNumber;
+
+
+    }
 
     /**
      * user details public setters and getters
