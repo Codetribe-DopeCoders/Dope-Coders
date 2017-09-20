@@ -58,10 +58,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         registerEmail = (EditText) findViewById(R.id.register_email);
         registerPassword = (EditText) findViewById(R.id.register_password);
         contactNumber = (EditText) findViewById(R.id.register_contact);
-        socialNumber = (EditText) findViewById(R.id.register_social_worker);
-        levelOneContacOne = (EditText) findViewById(R.id.register_contact1);
-        levelTwoContactTwo = (EditText) findViewById(R.id.register_contact2);
-        leve2OneContacOne = (EditText) findViewById(R.id.register_contact1cpf);
+
 
 
         //clickable button
