@@ -20,8 +20,8 @@
         android:textColor="@android:color/white"
         android:gravity="center_horizontal"
         android:textStyle="bold"
-        android:textSize="20dp"
-        android:text="Suffering from Abuse? Click here for help..." />
+        android:textSize="20sp"
+        android:text="Suffering from Abuse?" />
 
     <com.example.codetribe.palliate.GifImageView
         android:layout_centerInParent="true"

@@ -58,10 +58,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         registerEmail = (EditText) findViewById(R.id.register_email);
         registerPassword = (EditText) findViewById(R.id.register_password);
         contactNumber = (EditText) findViewById(R.id.register_contact);
-        socialNumber = (EditText) findViewById(R.id.register_social_worker);
-        levelOneContacOne = (EditText) findViewById(R.id.register_contact1);
-        levelTwoContactTwo = (EditText) findViewById(R.id.register_contact2);
-        leve2OneContacOne = (EditText) findViewById(R.id.register_contact1cpf);
+
 
 
         //clickable button
@@ -197,7 +194,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                     Toast.makeText(getApplicationContext(), "registered successfully", Toast.LENGTH_SHORT).show();
 
                     databaseReference = databaseReference.getRef().child("User");
-                    UserDetails userDetails = new UserDetails(userNamE, email, password, userNumber, socialContacts, contact1level, contact2level, contact1levelcpf);
+                    UserDetails userDetails = new UserDetails(userNamE, email, password, userNumber);
                     databaseReference.child(id).setValue(userDetails);
                 } else {
                     Toast.makeText(getApplicationContext(), "failed to register user, please register again", Toast.LENGTH_SHORT).show();

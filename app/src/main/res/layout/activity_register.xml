@@ -7,7 +7,6 @@
 
     tools:context="com.example.codetribe.palliate.RegisterActivity">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="vertical"
@@ -62,95 +61,16 @@
         android:layout_marginTop="10dp"
         android:hint="Contact No" />
 
-    <EditText
-        android:inputType="number"
-        android:id="@+id/register_social_worker"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/height"
-        android:drawableLeft="@drawable/ic_phone_forwarded_black_24dp"
-        android:drawablePadding="10dp"
-        android:paddingLeft="10dp"
-        android:background="@drawable/edittext"
-        android:layout_marginTop="10dp"
-        android:hint="Social Worker Contact" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Next of Kin(Level 2)"
-        android:padding="10dp"
-        android:textColor="@color/primary_text" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <EditText
-            android:inputType="number"
-            android:id="@+id/register_contact1"
-            android:layout_width="0dp"
-            android:background="@drawable/edittext"
+        <Button
+            android:id="@+id/create_an_account"
+            android:layout_width="match_parent"
             android:layout_height="@dimen/height"
-            android:layout_weight="1"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
-            android:drawablePadding="10dp"
-            android:paddingLeft="10dp"
-            android:drawableLeft="@drawable/ic_contact_phone_black_24dp"
-            android:hint="Contact No 1" />
-
-        <EditText
-            android:inputType="number"
-            android:id="@+id/register_contact2"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:drawablePadding="10dp"
-            android:paddingLeft="10dp"
-            android:drawableLeft="@drawable/ic_contact_phone_black_24dp"
-            android:background="@drawable/edittext"
-            android:layout_height="@dimen/height"
-            android:layout_marginTop="10dp"
-            android:hint="Contact No 2" />
-    </LinearLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="CPF number(Level 3)"
-        android:padding="10dp"
-        android:textColor="@color/primary_text" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <EditText
-            android:inputType="number"
-            android:id="@+id/register_contact1cpf"
-            android:layout_width="0dp"
-            android:layout_height="@dimen/height"
-            android:layout_marginRight="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/edittext"
-            android:layout_marginTop="10dp"
-            android:hint="Contact No"
-            android:drawablePadding="10dp"
-            android:paddingLeft="10dp"
-            android:drawableLeft="@drawable/ic_phone_android_black_24dp" />
-
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/create_an_account"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/height"
-        android:layout_marginTop="20dp"
-        android:textColor="@color/icons"
-        android:background="@drawable/button3"
-        android:layout_gravity="center_horizontal"
-        android:text="Create an  Account" />
+            android:layout_marginTop="240dp"
+            android:textColor="@color/icons"
+            android:background="@drawable/button3"
+            android:text="Create an  Account" />
     </LinearLayout>
 
 </ScrollView>
+
