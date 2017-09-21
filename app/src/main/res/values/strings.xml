@@ -11,4 +11,10 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_life">Life</string>
     <string name="title_activity_support">Support</string>
+
+
+    <string name="red_round_string">SMS next of kin</string>
+    <string name="green_round_string">connect with social worker</string>
+    <string name="yellow_round_string">connect with counsellor</string>
+
 </resources>
