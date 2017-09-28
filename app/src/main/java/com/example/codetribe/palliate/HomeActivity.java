@@ -51,7 +51,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         {
 
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-            alertDialogBuilder.setMessage("Update UserProfile");
+            alertDialogBuilder.setMessage("Update Profile");
 
             alertDialogBuilder.setPositiveButton("Yes",
                     new DialogInterface.OnClickListener() {
@@ -73,10 +73,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             AlertDialog alertDialog = alertDialogBuilder.create();
             alertDialog.show();
         }
-
-
-
-
 
         gifImageView = (GifImageView) findViewById(R.id.GifImageView);
         gifImageView.setGifImageResource(R.drawable.android);
@@ -142,8 +138,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         } else if (id == R.id.nav_drugs_alcohol) {
             startActivity(new Intent(this, Rape.class));
 
-        } else if (id == R.id.nav_abuse) {
-            startActivity(new Intent(this, Abuse.class));
 
         } else if (id == R.id.nav_logout) {
 

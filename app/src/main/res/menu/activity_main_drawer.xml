@@ -7,43 +7,45 @@
         <item
             android:id="@+id/nav_profile"
             android:icon="@drawable/ic_menu_account"
-            android:title="User Profile" />
-        <item
-            android:id="@+id/nav_help"
-            android:icon="@drawable/ic_menu_help_24dp"
-            android:title="Help" />
+            android:title="@string/user_profile_string" />
         <item
             android:id="@+id/nav_life_support"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Life Support" />
+            android:title="@string/lifesupport_string" />
+
+        <item
+            android:id="@+id/nav_rehab"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/rehabilitation_string" />
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@drawable/ic_menu_help_24dp"
+            android:title="@string/help_string" />
+
         <item
             android:id="@+id/nav_about_us"
             android:icon="@drawable/ic_menu_about"
-            android:title="Tips" />
+            android:title="@string/about_us_string" />
     </group>
 
 
-    <item android:title="Support Chat">
+    <item android:title="@string/support_chat_string">
         <menu>
             <item
                 android:id="@+id/nav_depression"
                 android:icon="@drawable/ic_menu_send"
-                android:title="Depression" />
+                android:title="@string/emotional_abuse_string" />
             <item
                 android:id="@+id/nav_drugs_alcohol"
                 android:icon="@drawable/ic_menu_send"
-                android:title="Rape" />
-            <item
-                android:id="@+id/nav_abuse"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Abuse" />
+                android:title="@string/physical_abuse_string" />
         </menu>
     </item>
 
     <item
         android:id="@+id/nav_logout"
         android:icon="@drawable/ic_menu_account"
-        android:title="Logout" />
+        android:title="@string/logout_string" />
 
 
 </menu>
