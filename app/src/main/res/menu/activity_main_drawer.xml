@@ -32,11 +32,11 @@
     <item android:title="@string/support_chat_string">
         <menu>
             <item
-                android:id="@+id/nav_depression"
+                android:id="@+id/nav_emotional_abuse"
                 android:icon="@drawable/ic_menu_send"
                 android:title="@string/emotional_abuse_string" />
             <item
-                android:id="@+id/nav_drugs_alcohol"
+                android:id="@+id/nav_physical_abuse"
                 android:icon="@drawable/ic_menu_send"
                 android:title="@string/physical_abuse_string" />
         </menu>

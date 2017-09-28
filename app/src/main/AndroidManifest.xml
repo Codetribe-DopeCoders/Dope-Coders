@@ -26,7 +26,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
 
         <meta-data
@@ -34,7 +33,6 @@
             android:value=".MainActivity" />
 
         <activity
-
             android:name=".RegisterActivity"
             android:label="Register"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -51,10 +49,6 @@
             android:label="Help"
             android:parentActivityName=".HomeActivity" />
         <activity
-            android:name=".HelpfulTipsActivity"
-            android:label="Helpful Tips"
-            android:parentActivityName=".HomeActivity" />
-        <activity
             android:name=".Support"
             android:label="Life Support"
             android:parentActivityName=".HomeActivity"
@@ -64,11 +58,13 @@
             android:label="Options"
             android:parentActivityName=".HomeActivity" />
         <activity
-            android:name=".Depression"
+            android:name=".EmotionalAbuse"
             android:label="Live Chat"
             android:parentActivityName=".HomeActivity" />
-        <activity android:name=".Rape" />
-        <activity android:name=".Abuse"></activity>
+        <activity android:name=".PhysicalAbuse" />
+        <activity android:name=".Abuse" />
+        <activity android:name=".LifeSupport" />
+        <activity android:name=".AboutUs"></activity>
     </application>
 
 </manifest>

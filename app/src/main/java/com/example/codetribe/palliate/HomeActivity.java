@@ -121,22 +121,21 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         int id = item.getItemId();
 
         if (id == R.id.nav_profile) {
-            startActivity(new Intent(this, RegisterActivity.class));
+            startActivity(new Intent(this, ProfileActivity.class));
         } else if (id == R.id.nav_help) {
             startActivity(new Intent(this, HelpActivity.class));
 
         } else if (id == R.id.nav_life_support) {
-            startActivity(new Intent(this, Support.class));
+            startActivity(new Intent(this, LifeSupport.class));
 
         } else if (id == R.id.nav_about_us) {
-            startActivity(new Intent(this, HelpfulTipsActivity.class));
+            startActivity(new Intent(this, AboutUs.class));
 
-        } else if (id == R.id.nav_depression) {
-            startActivity(new Intent(this, Depression.class));
+        } else if (id == R.id.nav_emotional_abuse) {
+            startActivity(new Intent(this, EmotionalAbuse.class));
 
-
-        } else if (id == R.id.nav_drugs_alcohol) {
-            startActivity(new Intent(this, Rape.class));
+        } else if (id == R.id.nav_physical_abuse) {
+            startActivity(new Intent(this, PhysicalAbuse.class));
 
 
         } else if (id == R.id.nav_logout) {

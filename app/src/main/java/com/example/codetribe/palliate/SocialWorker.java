@@ -37,7 +37,7 @@ public class SocialWorker extends Fragment {
         supportContent.add(new SupportClass(R.drawable.ic_menu_account, "Dineo Mafa", "Lotus Gardens", "Family Therapy", "+27 82 755 5096"));
         supportContent.add(new SupportClass(R.drawable.ic_menu_account, "Dorision Ngoepe", "Johannesburg", "Psychologist", "+27 76 270 1174"));
         supportContent.add(new SupportClass(R.drawable.ic_menu_account, "Dikeledi Makofane", "Pretoria 012", "Couples Counsellor", "+27 79 300 9406"));
-        supportContent.add(new SupportClass(R.drawable.ic_menu_account, "Sibusiso Jiyane", "Soshanguve", "Rape Counsellor ", "+27 72 895 1364"));
+        supportContent.add(new SupportClass(R.drawable.ic_menu_account, "Sibusiso Jiyane", "Soshanguve", "PhysicalAbuse Counsellor ", "+27 72 895 1364"));
         supportContent.add(new SupportClass(R.drawable.ic_menu_account, "Tercy Mathebula", "Polokwane", "Drug Counsellor", "+27 82 065 8534"));
 
         Adapter = new SupportAdapter(getActivity(), supportContent);
