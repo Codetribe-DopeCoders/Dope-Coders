@@ -15,6 +15,6 @@
 
     <string name="red_round_string">SMS next of kin</string>
     <string name="green_round_string">connect with social worker</string>
-    <string name="yellow_round_string">connect with counsellor</string>
+    <string name="yellow_round_string">Call counsellor</string>
 
 </resources>
