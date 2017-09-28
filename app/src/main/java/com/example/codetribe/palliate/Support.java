@@ -107,9 +107,7 @@ public class Support extends AppCompatActivity {
                 case 1:
                     Rehabilitation tab2 = new Rehabilitation();
                     return tab2;
-                case 2:
-                    CrimeEmergency tab3 = new CrimeEmergency();
-                    return tab3;
+
             }
             return null;
         }
