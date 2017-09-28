@@ -15,6 +15,7 @@
 
     <string name="red_round_string">SMS next of kin</string>
     <string name="green_round_string">connect with social worker</string>
+<<<<<<< HEAD
     <string name="yellow_round_string">connect with counsellor</string>
     <string name="user_profile_string">User Profile</string>
     <string name="lifesupport_string">Life Support</string>
@@ -26,5 +27,8 @@
     <string name="physical_abuse_string">Physical Abuse</string>
     <string name="logout_string">LogOut</string>
 
+=======
+    <string name="yellow_round_string">Call counsellor</string>
+>>>>>>> ac7fc45f15e1c738e510803d7fc01d2176c05802
 
 </resources>
