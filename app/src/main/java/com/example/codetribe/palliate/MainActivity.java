@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private EditText editTextPassword;
     private Button buttonRegister;
     private Button buttonLogin;
+    private Button buttonReset;
 
 
     @Override
@@ -41,8 +42,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         editTextPassword = (EditText) findViewById(R.id.login_passord);
         buttonRegister = (Button) findViewById(R.id.register1);
         buttonLogin = (Button) findViewById(R.id.login_btn);
+        buttonReset = (Button) findViewById(R.id.reset_btn);
 
         buttonLogin.setOnClickListener(this);
+        buttonReset.setOnClickListener(this);
         buttonRegister.setOnClickListener(this);
 
 
@@ -85,6 +88,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         if (v == buttonLogin) {
             UserLogin();
+        }
+
+        if (v == buttonReset) {
+            finish();
+            startActivity(new Intent(this, ResetActivity.class));
         }
         if (v == buttonRegister) {
             finish();

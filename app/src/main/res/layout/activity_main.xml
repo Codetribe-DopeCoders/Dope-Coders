@@ -55,7 +55,18 @@
         android:layout_gravity="center_horizontal"
         android:text="LOGIN" />
 
-    <TextView
+        <Button
+
+            android:id="@+id/reset_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height"
+            android:layout_marginTop="5dp"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_gravity="center_horizontal"
+            android:text="Forgot Password" />
+
+
+        <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -76,7 +87,7 @@
 
     <Button
         android:id="@+id/register1"
-        android:layout_width="150dp"
+        android:layout_width="match_parent"
         android:layout_marginTop="10dp"
         android:background="@drawable/button2"
         android:layout_height="@dimen/height"
