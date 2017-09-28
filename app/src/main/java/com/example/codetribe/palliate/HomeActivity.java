@@ -1,6 +1,8 @@
 package com.example.codetribe.palliate;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -16,6 +18,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -27,12 +30,53 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
     private GifImageView gifImageView;
 
+
+    private boolean validate = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
+
+        Intent intent = getIntent();
+        validate = intent.getBooleanExtra("valid",false);
+
+
+
+        if(validate == true)
+        {
+
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+            alertDialogBuilder.setMessage("Update UserProfile");
+
+            alertDialogBuilder.setPositiveButton("Yes",
+                    new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface arg0, int arg1) {
+                            Toast.makeText(HomeActivity.this, "Profile Update", Toast.LENGTH_LONG).show();
+                            Intent intent = new Intent(HomeActivity.this, ProfileActivity.class);
+                            startActivity(intent);
+                        }
+                    });
+
+            alertDialogBuilder.setNegativeButton("Not Now", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    Toast.makeText(HomeActivity.this, "Dont forget to update your Profile", Toast.LENGTH_LONG).show();
+                }
+            });
+
+            AlertDialog alertDialog = alertDialogBuilder.create();
+            alertDialog.show();
+        }
+
+
+
+
 
         gifImageView = (GifImageView) findViewById(R.id.GifImageView);
         gifImageView.setGifImageResource(R.drawable.android);
@@ -133,6 +177,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 Uri uri = resultData.getData();
                 Log.i(TAG, "Uri: " + uri.toString());
                 gifImageView.setGifImageUri(uri);
+
+
             }
         }
     }
@@ -141,4 +187,12 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         Log.i(TAG, "External Storage permission has NOT been granted. Requesting permission.");
         ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 0);
     }
+
+
+
+
+
+
+
+
 }

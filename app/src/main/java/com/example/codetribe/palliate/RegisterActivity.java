@@ -1,5 +1,6 @@
 package com.example.codetribe.palliate;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -150,12 +151,18 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                     String password = registerPassword.getText().toString().trim();
                     String userNumber = contactNumber.getText().toString().trim();
 
+                    //dialog box startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                    boolean valid =true;
+                    Intent intent = new Intent(RegisterActivity.this,HomeActivity.class);
+                    intent.putExtra("valid",valid);
+                    startActivity(intent);
+
+
 
                     String id = task.getResult().getUser().getUid();
 
-                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
-
                     Toast.makeText(getApplicationContext(), "registered successfully", Toast.LENGTH_SHORT).show();
+
 
                     databaseReference = databaseReference.getRef().child("User");
                     UserDetails userDetails = new UserDetails(userNamE, email, password, userNumber);
