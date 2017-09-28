@@ -76,13 +76,12 @@
             android:layout_margin="10dp"
             android:layout_below="@id/profile_image_container"
             >
-
             <EditText
                 android:id="@+id/register_email"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/height"
                 android:paddingLeft="10dp"
-                android:drawableLeft="@drawable/email"
+                android:drawableLeft="@drawable/ic_mail_outline_black_24dp"
                 android:background="@drawable/edittext"
                 android:layout_marginTop="10dp"
                 android:drawablePadding="10dp"
