@@ -11,16 +11,16 @@
         tools:context="com.example.codetribe.palliate.Levels">
 
 
-            <Button
-                android:id="@+id/magic_button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:height="100dp"
-                android:background="@drawable/red_button"
-                android:text="@string/red_round_string"
-                android:textSize="15sp"
-                android:textColor="#ffffff" />
+        <Button
+            android:id="@+id/magic_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:height="100dp"
+            android:background="@drawable/red_button"
+            android:text="@string/red_round_string"
+            android:textSize="15sp"
+            android:textColor="#ffffff" />
 
 
             <Button

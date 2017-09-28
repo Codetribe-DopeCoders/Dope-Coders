@@ -17,8 +17,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import br.com.bloder.magic.view.MagicButton;
-
 public class Levels extends AppCompatActivity {
     Button magicButton, magicButton1, magicButton2;
     private String PhoneNum = "0762701174";
@@ -94,7 +92,8 @@ public class Levels extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(android.content.Intent.ACTION_VIEW);
                 i.putExtra("address", "0762701174;0793009406");
-                i.putExtra("sms_body", "Hello, this is an emergency I need your help. please call me as soon as possible!");
+                i.putExtra("sms_body", "Hello, this is an emergency I need your help. please call me as soon as possible!" +
+                        "");
                 i.setType("vnd.android-dir/mms-sms");
                 startActivity(i);
             }

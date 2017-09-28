@@ -27,7 +27,7 @@
         android:background="@drawable/edittext"
         android:paddingLeft="10dp"
         android:drawablePadding="10dp"
-        android:drawableLeft="@drawable/email"
+        android:drawableLeft="@drawable/ic_mail_outline_black_24dp"
         android:layout_marginBottom="10dp"
         android:layout_height="@dimen/height"
         android:hint="Email Address" />
@@ -62,15 +62,7 @@
         android:paddingTop="5dp"
         android:text="OR" />
 
-    <Button
-        android:id="@+id/login_facebook"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/height"
-        android:layout_marginTop="5dp"
-        android:textColor="@color/icons"
-        android:background="@drawable/button2"
-        android:layout_gravity="center_horizontal"
-        android:text="LOGIN with facebook" />
+
 
     <TextView
 
@@ -86,7 +78,7 @@
         android:id="@+id/register1"
         android:layout_width="150dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/button1"
+        android:background="@drawable/button2"
         android:layout_height="@dimen/height"
         android:textColor="@color/icons"
         android:layout_gravity="center_horizontal"

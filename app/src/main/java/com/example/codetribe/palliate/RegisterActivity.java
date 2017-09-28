@@ -1,5 +1,6 @@
 package com.example.codetribe.palliate;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -26,10 +27,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     private EditText registerEmail;
     private EditText registerPassword;
     private EditText contactNumber;
-    private EditText socialNumber;
-    private EditText levelOneContacOne;
-    private EditText levelTwoContactTwo;
-    private EditText leve2OneContacOne;
     private Button createAnAccount;
     private FirebaseAuth firebaseAuth;
     private DatabaseReference databaseReference;
@@ -98,10 +95,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
         String password = registerPassword.getText().toString().trim();
         String userNumber = contactNumber.getText().toString().trim();
-        String socialContacts = socialNumber.getText().toString().trim();
-        String contact1level = levelOneContacOne.getText().toString().trim();
-        String contact2level = levelTwoContactTwo.getText().toString().trim();
-        String contact1levelcpf = leve2OneContacOne.getText().toString().trim();
+
 
         // validate user input
 
@@ -139,32 +133,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             return;
 
         }
-        if (TextUtils.isEmpty(socialContacts)) {
 
-            Toast.makeText(getApplicationContext(), "please, enter social wo number", Toast.LENGTH_LONG).show();
-            return;
-
-        }
-        if (TextUtils.isEmpty(contact1level)) {
-
-            Toast.makeText(getApplicationContext(), "please, enter contact one in next of kin", Toast.LENGTH_LONG).show();
-            return;
-
-        }
-
-        if (TextUtils.isEmpty(contact2level)) {
-
-            Toast.makeText(getApplicationContext(), "please, enter contact two in next of kin", Toast.LENGTH_LONG).show();
-            return;
-
-        }
-
-        if (TextUtils.isEmpty(contact1levelcpf)) {
-
-            Toast.makeText(getApplicationContext(), "please, enter contact one in cpf numbers", Toast.LENGTH_LONG).show();
-            return;
-
-        }
 
 
         //create user account
@@ -181,17 +150,19 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                     String email = registerEmail.getText().toString().trim();
                     String password = registerPassword.getText().toString().trim();
                     String userNumber = contactNumber.getText().toString().trim();
-                    String socialContacts = socialNumber.getText().toString().trim();
-                    String contact1level = levelOneContacOne.getText().toString().trim();
-                    String contact2level = levelTwoContactTwo.getText().toString().trim();
-                    String contact1levelcpf = leve2OneContacOne.getText().toString().trim();
+
+                    //dialog box startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                    boolean valid =true;
+                    Intent intent = new Intent(RegisterActivity.this,HomeActivity.class);
+                    intent.putExtra("valid",valid);
+                    startActivity(intent);
+
 
 
                     String id = task.getResult().getUser().getUid();
 
-                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
-
                     Toast.makeText(getApplicationContext(), "registered successfully", Toast.LENGTH_SHORT).show();
+
 
                     databaseReference = databaseReference.getRef().child("User");
                     UserDetails userDetails = new UserDetails(userNamE, email, password, userNumber);
