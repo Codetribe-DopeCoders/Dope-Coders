@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         editTextEmail = (EditText) findViewById(R.id.login_email);
         editTextPassword = (EditText) findViewById(R.id.login_passord);
+
         buttonRegister = (Button) findViewById(R.id.register1);
         buttonLogin = (Button) findViewById(R.id.login_btn);
         buttonReset = (Button) findViewById(R.id.reset_btn);
@@ -77,29 +79,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     //start profile activity
                     finish();
                     startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+                } else {
+                    Toast.makeText(getParent().getBaseContext(), "Error " + task.getException().getMessage(), Toast.LENGTH_LONG).show();
                 }
-
-
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(getParent().getBaseContext(), "Error " + e.getMessage(), Toast.LENGTH_LONG).show();
             }
         });
     }
 
     @Override
     public void onClick(View v) {
-        if (v == buttonLogin) {
+        if (v.getId() == R.id.login_btn) {
             UserLogin();
         }
-
-        if (v == buttonReset) {
-            finish();
+        if (v.getId() == R.id.reset_btn) {
             startActivity(new Intent(this, ResetActivity.class));
         }
-        if (v == buttonRegister) {
-            finish();
+        if (v.getId() == R.id.register1) {
             startActivity(new Intent(this, RegisterActivity.class));
         }
-
     }
-
 
 }

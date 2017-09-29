@@ -62,7 +62,7 @@
             android:label="Live Chat"
             android:parentActivityName=".HomeActivity" />
         <activity android:name=".PhysicalAbuse" />
-        <activity android:name=".Abuse" />
+        <activity android:name=".ResetActivity" />
         <activity android:name=".LifeSupport" />
         <activity android:name=".AboutUs"></activity>
     </application>
