@@ -24,7 +24,8 @@
     <string name="emotional_abuse_string">Emotional Abuse</string>
     <string name="physical_abuse_string">Physical Abuse</string>
     <string name="logout_string">LogOut</string>
-
+    <string name="password">Password</string>
+    <string name="email_address">Email Address</string>
     <string name="yellow_round_string">Call counsellor</string>
 
 
