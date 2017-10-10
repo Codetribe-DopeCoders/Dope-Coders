@@ -85,7 +85,7 @@
                 android:background="@drawable/edittext"
                 android:layout_marginTop="10dp"
                 android:drawablePadding="10dp"
-                android:hint="Name"
+                android:hint=" FullName"
                 android:inputType="textEmailAddress" />
             <EditText
                 android:id="@+id/register_email"
@@ -150,6 +150,7 @@
                 android:hint="Next of Kin 2" />
 
             <Button
+                android:id="@+id/submit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Update profile"

@@ -10,23 +10,20 @@ public class UserDetails {
     private String mMail;
     private String mPasswors;
     private String mContactNumber;
-    private String mSocialNumber;
     private String mLevelOneContacOne;
     private String mLevelTwoContactTwo;
-    private String mLeve2OneContacOne;
+
 
 
 
     //user details public constructor
-    public UserDetails(String mUserName, String mMail, String mPasswors, String mContactNumber, String mSocialNumber, String mLevelOneContacOne, String mLevelTwoContactTwo, String mLeve2OneContacOne) {
+    public UserDetails(String mUserName, String mMail, String mPasswors, String mContactNumber, String mLevelOneContacOne, String mLevelTwoContactTwo) {
         this.mUserName = mUserName;
         this.mMail = mMail;
         this.mPasswors = mPasswors;
         this.mContactNumber = mContactNumber;
-        this.mSocialNumber = mSocialNumber;
         this.mLevelOneContacOne = mLevelOneContacOne;
         this.mLevelTwoContactTwo = mLevelTwoContactTwo;
-        this.mLeve2OneContacOne = mLeve2OneContacOne;
 
     }
 
@@ -75,14 +72,6 @@ public class UserDetails {
         this.mContactNumber = mContactNumber;
     }
 
-    public String getmSocialNumber() {
-        return mSocialNumber;
-    }
-
-    public void setmSocialNumber(String mSocialNumber) {
-        this.mSocialNumber = mSocialNumber;
-    }
-
     public String getmLevelOneContacOne() {
         return mLevelOneContacOne;
     }
@@ -99,13 +88,6 @@ public class UserDetails {
         this.mLevelTwoContactTwo = mLevelTwoContactTwo;
     }
 
-    public String getmLeve2OneContacOne() {
-        return mLeve2OneContacOne;
-    }
-
-    public void setmLeve2OneContacOne(String mLeve2OneContacOne) {
-        this.mLeve2OneContacOne = mLeve2OneContacOne;
-    }
 
 
 }
