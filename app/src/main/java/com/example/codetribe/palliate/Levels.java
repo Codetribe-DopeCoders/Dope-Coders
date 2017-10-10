@@ -82,7 +82,7 @@ public class Levels extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(android.content.Intent.ACTION_VIEW);
                 i.putExtra("address", "0762701174;0793009406");
-                i.putExtra("sms_body", "Hello, this is an emergency I need your help. please call me as soon as possible!" +
+                i.putExtra("sms_body", "Hellos, this is an emergency I need your help. please call me as soon as possible!" +
                         "");
                 i.setType("vnd.android-dir/mms-sms");
                 startActivity(i);
