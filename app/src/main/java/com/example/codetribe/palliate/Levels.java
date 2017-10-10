@@ -92,11 +92,11 @@ public class Levels extends AppCompatActivity {
         magicButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(android.content.Intent.ACTION_VIEW);
-                i.putExtra("address", "0762701174;0793009406");
-                i.putExtra("sms_body", "Hello, this is an emergency I need your help. please call me as soon as possible!");
-                i.setType("vnd.android-dir/mms-sms");
-                startActivity(i);
+//                Intent i = new Intent(android.content.Intent.ACTION_VIEW);
+//                i.putExtra("address", "0762701174;0793009406");
+//                i.putExtra("sms_body", "Hello, this is an emergency I need your help. please call me as soon as possible!");
+//                i.setType("vnd.android-dir/mms-sms");
+//                startActivity(i);
             }
         });
         magicButton2.setOnClickListener(new View.OnClickListener() {
