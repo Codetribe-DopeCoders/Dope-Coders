@@ -4,7 +4,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class AboutUs extends AppCompatActivity {
-    private String read;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

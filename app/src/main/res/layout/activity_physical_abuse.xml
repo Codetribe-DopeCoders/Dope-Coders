@@ -7,7 +7,7 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:paddingTop="16dp"
-    tools:context="com.example.codetribe.palliate.EmotionalAbuse">
+    tools:context="com.example.codetribe.palliate.PhysicalAbuse">
 
     <ListView
         android:id="@+id/messageListView"
@@ -46,6 +46,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
+            android:background="@drawable/button1"
+            android:textColor="@android:color/white"
             android:enabled="false"
             android:text="Send" />
 
@@ -59,3 +61,4 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true" />
 </RelativeLayout>
+
