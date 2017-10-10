@@ -60,7 +60,7 @@ public class Levels extends AppCompatActivity {
                 databaseError.getMessage();
             }
         });
-
+/*
         magicButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,11 +69,23 @@ public class Levels extends AppCompatActivity {
                 Location currentLocation ;
                sendLocationSMS(phoneNumber,phoneNumber1,currentLocation);*/
 
-                Intent callIntent = new Intent(Intent.ACTION_DIAL);
+     /*           Intent callIntent = new Intent(Intent.ACTION_DIAL);
                 callIntent.setData(Uri.parse("tel:" + Uri.encode(num1.trim())));
                 callIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
                 startActivity(callIntent);
+            }
+        });
+*/
+        magicButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(android.content.Intent.ACTION_VIEW);
+                i.putExtra("address", "0762701174;0793009406");
+                i.putExtra("sms_body", "Hello, this is an emergency I need your help. please call me as soon as possible!" +
+                        "");
+                i.setType("vnd.android-dir/mms-sms");
+                startActivity(i);
             }
         });
 
