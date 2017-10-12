@@ -10,8 +10,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class ProfileActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -25,6 +30,8 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     private ProgressDialog progressDialog;
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
+    private FirebaseUser firebaseUser;
+    private FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +42,8 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         firebaseDatabase = FirebaseDatabase.getInstance();
 
 
-        databaseReference = firebaseDatabase.getReference().child("User");
+        firebaseUser = firebaseAuth.getInstance().getCurrentUser();
+        databaseReference = firebaseDatabase.getReference();
 
 
         editName = (EditText) findViewById(R.id.register_name);
@@ -112,9 +120,24 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
 
         if (view == buttonSubmit) {
 
+            String uid = firebaseUser.getUid();
+
+            databaseReference = databaseReference.getRef().child("User");
+
+            //public UserDetails(String mUserName, String mMail, String mPasswors, String mContactNumber, String mLevelOneContacOne, String mLevelTwoContactTwo)
+
             // (String firstName, String lastName, String emailAddress, String location, String identity, String gender, String password, String confirmPassword
             UserDetails userDetails = new UserDetails(name, email, contact, password, nextOfKin1, nextOfNext2);
-            databaseReference.setValue(userDetails);
+            Map<String, Object> updateUser = new HashMap<>();
+
+            updateUser.put("mUserName", name);
+            updateUser.put("mMail", email);
+            updateUser.put("mPasswors", password);
+            updateUser.put("mContactNumber", contact);
+            updateUser.put("mLevelOneContacOne", nextOfKin1);
+            updateUser.put("mLevelTwoContactTwo", nextOfNext2);
+
+            databaseReference.child(uid).updateChildren(updateUser);
 
             startActivity(new Intent(getApplicationContext(), MainActivity.class));
 

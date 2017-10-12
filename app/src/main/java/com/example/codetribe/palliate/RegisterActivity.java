@@ -1,6 +1,5 @@
 package com.example.codetribe.palliate;
 
-import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -48,7 +47,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 //            startActivity(new Intent(getApplicationContext(),MainActivity.class));
 //        }
 
-        databaseReference = firebaseDatabase.getReference().child("User");
+        databaseReference = firebaseDatabase.getReference();
 
         //user details
         registerName = (EditText) findViewById(R.id.register_name);
