@@ -70,7 +70,6 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         String nextOfNext2 = editNextOfKin2.getText().toString();
 
         if (TextUtils.isEmpty(name)) {
-
             Toast.makeText(getApplicationContext(), "please, enter your full name", Toast.LENGTH_SHORT).show();
             return;
 

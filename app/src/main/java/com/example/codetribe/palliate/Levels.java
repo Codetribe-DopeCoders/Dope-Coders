@@ -19,13 +19,16 @@ import com.google.firebase.database.ValueEventListener;
 
 public class Levels extends AppCompatActivity {
     Button magicButton, magicButton1, magicButton2;
-    private String PhoneNum = "0762701174";
-
     DatabaseReference mDatabaseReference;
 
-    String num1;
+    String nextOfKinNo1,nextOfKinNo2;
 
+
+//new
     FirebaseAuth firebaseAuth;
+    private FirebaseDatabase mFirebaseDatabase;
+    private FirebaseAuth.AuthStateListener mAuthListiner;
+    private String userID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,22 +39,34 @@ public class Levels extends AppCompatActivity {
         magicButton1 = (Button) findViewById(R.id.magic_button1);
         magicButton2 = (Button) findViewById(R.id.magic_button2);
 
+        firebaseAuth = FirebaseAuth.getInstance();
+        mFirebaseDatabase = FirebaseDatabase.getInstance();
+        mDatabaseReference = mFirebaseDatabase.getReference();
+        FirebaseUser user = firebaseAuth.getCurrentUser();
+        //FirebaseUser user = firebaseAuth.getInstance().getCurrentUser();
 
-        FirebaseUser user = firebaseAuth.getInstance().getCurrentUser();
-
-
-        final String uid = user.getUid();
+        userID = user.getUid();
+        //final String uid = user.getUid();
 
 
         // Toast.makeText(getApplicationContext(), "uid " + uid,Toast.LENGTH_LONG).show();
         //  Log.d("UID", uid);
 
-        mDatabaseReference = FirebaseDatabase.getInstance().getReference("User").child("User");
+       // mDatabaseReference = FirebaseDatabase.getInstance().getReference("User");
 
-        mDatabaseReference.child(uid).addValueEventListener(new ValueEventListener() {
+        mDatabaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                num1 = (String) dataSnapshot.child("mSocialNumber").getValue();
+                for (DataSnapshot ds: dataSnapshot.getChildren()){
+                    UserDetails uDetails = new UserDetails();
+
+                    uDetails.setmLevelOneContacOne(ds.child(userID).getValue(UserDetails.class).getmLevelOneContacOne());
+                    uDetails.setmLevelTwoContactTwo(ds.child(userID).getValue(UserDetails.class).getmLevelTwoContactTwo());
+
+
+                    nextOfKinNo1 = uDetails.getmLevelOneContacOne();
+                    nextOfKinNo2 = uDetails.getmLevelTwoContactTwo();
+                }
 
             }
 
@@ -77,17 +92,7 @@ public class Levels extends AppCompatActivity {
             }
         });
 */
-        magicButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(android.content.Intent.ACTION_VIEW);
-                i.putExtra("address", "0762701174;0793009406");
-                i.putExtra("sms_body", "Hello, this is an emergency I need your help. please call me as soon as possible!" +
-                        "");
-                i.setType("vnd.android-dir/mms-sms");
-                startActivity(i);
-            }
-        });
+
 
         magicButton1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -104,6 +109,18 @@ public class Levels extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(android.content.Intent.ACTION_VIEW);
                 i.putExtra("address", "0762701174;0793009406");
+                i.putExtra("sms_body", "Hello, this is an emergency I need your help. please call me as soon as possible!" +
+                        "");
+                i.setType("vnd.android-dir/mms-sms");
+                startActivity(i);
+            }
+        });
+
+        magicButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(android.content.Intent.ACTION_VIEW);
+                i.putExtra("address", nextOfKinNo1+";"+nextOfKinNo2);
                 i.putExtra("sms_body", "Hello, this is an emergency I need your help. please call me as soon as possible!" +
                         "");
                 i.setType("vnd.android-dir/mms-sms");

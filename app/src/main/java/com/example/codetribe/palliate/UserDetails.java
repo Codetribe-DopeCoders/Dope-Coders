@@ -3,7 +3,7 @@ package com.example.codetribe.palliate;
 /**
  * Created by codetribe on 8/28/2017.
  */
-
+//user details public constructor for social worker
 public class UserDetails {
 
     private String mUserName;
@@ -14,9 +14,10 @@ public class UserDetails {
     private String mLevelTwoContactTwo;
 
 
+    public UserDetails() {
+    }
 
-
-    //user details public constructor
+    //user details public constructor for next of kin
     public UserDetails(String mUserName, String mMail, String mPasswors, String mContactNumber, String mLevelOneContacOne, String mLevelTwoContactTwo) {
         this.mUserName = mUserName;
         this.mMail = mMail;
@@ -26,7 +27,7 @@ public class UserDetails {
         this.mLevelTwoContactTwo = mLevelTwoContactTwo;
 
     }
-
+    //user details public constructor for counsellor
     public UserDetails(String mUserName, String mMail, String mPasswors, String mContactNumber) {
         this.mUserName = mUserName;
         this.mMail = mMail;
