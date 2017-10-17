@@ -28,5 +28,10 @@
     <string name="email_address">Email Address</string>
     <string name="yellow_round_string">Call counsellor</string>
 
+    <string name="login">Login</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="or">OR</string>
+    <string name="need_account">NEED AN ACCOUNT?</string>
+    <string name="register">Register</string>
 
 </resources>
