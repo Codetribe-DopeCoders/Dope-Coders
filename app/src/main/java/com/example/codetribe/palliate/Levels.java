@@ -11,6 +11,7 @@ import android.widget.Button;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -19,7 +20,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class Levels extends AppCompatActivity {
     Button magicButton, magicButton1, magicButton2;
-    DatabaseReference mDatabaseReference;
+    private DatabaseReference mDatabaseReference;
 
     String nextOfKinNo1,nextOfKinNo2;
 
@@ -29,6 +30,8 @@ public class Levels extends AppCompatActivity {
     private FirebaseDatabase mFirebaseDatabase;
     private FirebaseAuth.AuthStateListener mAuthListiner;
     private String userID;
+    //
+    ChildEventListener mChildEvLiestiner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +44,7 @@ public class Levels extends AppCompatActivity {
 
         firebaseAuth = FirebaseAuth.getInstance();
         mFirebaseDatabase = FirebaseDatabase.getInstance();
-        mDatabaseReference = mFirebaseDatabase.getReference();
+        mDatabaseReference = mFirebaseDatabase.getReference().child("User");
         FirebaseUser user = firebaseAuth.getCurrentUser();
         //FirebaseUser user = firebaseAuth.getInstance().getCurrentUser();
 

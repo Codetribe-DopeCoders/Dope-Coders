@@ -90,7 +90,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="5dp"
             android:background="@drawable/button3"
-            android:text="LOGIN"
+            android:text="@string/login"
             android:textColor="@color/icons" />
 
         <Button
@@ -101,7 +101,7 @@
             android:layout_height="@dimen/height"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="5dp"
-            android:text="Forgot Password" />
+            android:text="@string/forgot_password" />
 
 
         <TextView
@@ -109,7 +109,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:paddingTop="5dp"
-            android:text="OR" />
+            android:text="@string/or" />
 
 
         <TextView
@@ -118,9 +118,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:paddingTop="10dp"
-            android:text="NEED AN ACCOUNT?"
+            android:text="@string/need_account"
             android:textColor="@color/primary_text"
-            android:textSize="10dp" />
+            android:textSize="12sp" />
 
         <Button
             android:id="@+id/register1"
@@ -129,7 +129,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
             android:background="@drawable/button2"
-            android:text="register"
+            android:text="@string/register"
             android:textColor="@color/icons" />
     </LinearLayout>
 
