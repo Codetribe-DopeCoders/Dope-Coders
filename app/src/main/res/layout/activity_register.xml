@@ -49,17 +49,31 @@
         android:hint="Email Address"
         android:inputType="textEmailAddress" />
 
-    <EditText
-        android:inputType="textPassword"
-        android:id="@+id/register_password"
-        android:layout_width="match_parent"
-        android:background="@drawable/edittext"
-        android:paddingLeft="10dp"
-        android:layout_height="@dimen/height"
-        android:drawableLeft="@drawable/ic_lock_outline_black_24dp"
-        android:drawablePadding="10dp"
-        android:layout_marginTop="10dp"
-        android:hint="Password" />
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleContentDescription="ruuu"
+            app:passwordToggleDrawable="@drawable/ic_remove_red_eye_black_24dp"
+            app:passwordToggleEnabled="true"
+
+            >
+
+            <EditText
+                android:id="@+id/register_password"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/edittext"
+                android:maxLength="12"
+                android:padding="16dp"
+                android:inputType="textPassword"
+                android:drawablePadding="10dp"
+                android:drawableLeft="@drawable/ic_lock_outline_black_24dp"
+                android:drawableStart="@drawable/ic_lock_outline_black_24dp"
+                android:hint="Password"
+                android:textColor="#000000"
+                android:textSize="16dp" />
+
+        </android.support.design.widget.TextInputLayout>
 
     <EditText
         android:inputType="number"
