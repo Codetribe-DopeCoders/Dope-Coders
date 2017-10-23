@@ -42,7 +42,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ProfileActivity"
-            android:label="User Profile"
+            android:label="My Profile"
             android:parentActivityName=".HomeActivity" />
         <activity
             android:name=".HelpActivity"
