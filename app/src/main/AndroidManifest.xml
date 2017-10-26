@@ -64,7 +64,6 @@
         <activity android:name=".PhysicalAbuse" />
         <activity android:name=".ResetActivity" />
         <activity android:name=".LifeSupport" />
-        <activity android:name=".AboutUs"></activity>
     </application>
 
 </manifest>
