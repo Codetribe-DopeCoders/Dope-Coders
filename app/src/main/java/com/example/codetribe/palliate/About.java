@@ -32,8 +32,8 @@ public class About extends AppCompatActivity {
         spinner.setAdapter(new MyAdapter(
                 toolbar.getContext(),
                 new String[]{
-                        "About App",
-                        "About Us",
+                        "App Info",
+                        "FAQs",
                         "Contact Us",
                 }));
 

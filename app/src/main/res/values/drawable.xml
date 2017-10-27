@@ -7,4 +7,5 @@
     <item name="ic_menu_about" type="drawable">drawable/ic_menu_about</item>
     <item name="ic_menu_depression" type="drawable">drawable/ic_menu_depression</item>
     <item name="ic_menu_send" type="drawable">@android:drawable/ic_menu_send</item>
+
 </resources>
