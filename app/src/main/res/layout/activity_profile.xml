@@ -22,7 +22,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:text="Sibusiso Jiyane"
+            android:text="Sibusiso Jiyane"
             android:gravity="center"
             android:id="@+id/user_name"
             android:layout_centerHorizontal="true"
