@@ -11,19 +11,22 @@
         android:id="@+id/numbers"
         style="@style/CategoryStyle"
         android:textColor="@android:color/black"
-        android:text="FAQ" />
+        android:text="FAQ"
+        android:onClick="FAQ" />
 
     <TextView
         android:id="@+id/family"
         style="@style/CategoryStyle"
         android:textColor="@android:color/black"
-        android:text="Contact Us" />
+        android:text="Contact Us"
+        android:onClick="Contact" />
 
     <TextView
         android:id="@+id/colors"
         style="@style/CategoryStyle"
         android:textColor="@android:color/black"
-        android:text="App Info" />
+        android:text="App Info"
+        android:onClick="App" />
 
 
 </LinearLayout>

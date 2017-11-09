@@ -67,7 +67,19 @@
         <activity
             android:name=".AboutActivity"
             android:label="Help"
-            android:parentActivityName=".HomeActivity"></activity>
+            android:parentActivityName=".HomeActivity" />
+        <activity
+            android:name=".FaqActivity"
+            android:label="FAQ"
+            android:parentActivityName=".AboutActivity" />
+        <activity
+            android:name=".Contact"
+            android:label="Contact Us"
+            android:parentActivityName=".AboutActivity" />
+        <activity
+            android:name=".AppActivity"
+            android:label="App Info"
+            android:parentActivityName=".AboutActivity"></activity>
     </application>
 
 </manifest>
