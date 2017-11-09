@@ -65,9 +65,8 @@
         <activity android:name=".ResetActivity" />
         <activity android:name=".LifeSupport" />
         <activity
-            android:name=".About"
-            android:label="@string/title_activity_about"
-            android:theme="@style/AppTheme.NoActionBar"
+            android:name=".AboutActivity"
+            android:label="Help"
             android:parentActivityName=".HomeActivity"></activity>
     </application>
 
