@@ -11,7 +11,7 @@
         android:id="@+id/numbers"
         style="@style/CategoryStyle"
         android:textColor="@android:color/black"
-        android:text="FAQ"
+        android:text="About Us"
         android:onClick="FAQ" />
 
     <TextView

@@ -70,7 +70,7 @@
             android:parentActivityName=".HomeActivity" />
         <activity
             android:name=".FaqActivity"
-            android:label="FAQ"
+            android:label="About Us"
             android:parentActivityName=".AboutActivity" />
         <activity
             android:name=".Contact"

@@ -50,7 +50,8 @@
         android:gravity="center_horizontal"
         android:layout_marginTop="70dp"
         android:textStyle="bold"
-        android:textColor="@color/colorPrimary"
+        android:textSize="20dp"
+        android:textColor="@color/colorPrimaryDark"
         android:text="LICENCES" />
 
 
