@@ -34,4 +34,49 @@
     <string name="register">Register</string>
     <string name="title_activity_about">About</string>
 
+
+    <string name="topic_one">Child Abuse</string>
+    <string name="topic_two">Depression</string>
+    <string name="topic_three">Emotional Abuse</string>
+    <string name="topic_four">Drug Abuse</string>
+    <string name="topic_five">Physical Abuse</string>
+
+
+    <string name="one_description">1. Volunteer your time. Get involved with other parents in your community. Help vulnerable children and their families. Start a playgroup. \n
+2. Discipline your children thoughtfully. Never discipline your child when you are upset. Give yourself time to calm down. Remember that discipline is a way to teach your child. Use privileges
+        to encourage good behavior and time-outs to help your child regain control.
+\n 3. Examine your behavior. Abuse is not just physical. Both words and actions can inflict deep, lasting wounds. Be a nurturing parent.
+        Use your actions to show children and other adults that conflicts can be settled without hitting or yelling.</string>
+
+    <string name="three_description">1. Your partner may limit your freedom (not allow you to spend time with some people or insist on knowing your whereabouts), reject you (pretend you don’t exist, blame you for things that are not your fault) or belittle you by calling you names, insulting your family or career. \n
+    2. Emotionally abusive behavior patterns that are controlling can spill over into finances. Emotional abuse can include a partner monitoring your finances, making you account for every penny, withholding money from you, or restricting your spending.
+    \n3. Emotional abuse can also include monitoring your time, insisting on checking your phone and emails, and limiting your contact with family.</string>
+
+    <string name="four_description">A few ways on how you see that you are an addict can be one or all of these. You should talk to someone close as soon as you notice them. \n1. Using addictive drugs (illicit or prescribed) for recreational purposes \n
+2. Seeking out intoxication every time you use \n
+        3. Abusing prescription medication</string>
+
+
+    <string name="two_description">
+Depression can negatively affect how you feel, the way you think and how you act.
+Depression affects your mood, body and your thoughts.\n
+You should seek professional help, if you persistently experience at least five of these symptoms for two weeks or longer: \n
+\n -feelings of sad, helpless or hopeless \n
+-loss of interest in activities that once brought you pleasure \n
+-insomnia or excessive sleeping \n
+-significant weight loss or weight gain \n
+-feelings of worthlessness or inappropriate guilt \n
+-not wanting to move or feeling lethargic \n
+-difficulty concentrating or remembering things \n
+-recurrent thoughts of death or suicide \n
+-fatigue and loss of energy</string>
+
+    <string name="five_description">Physical abuse is any intentional act causing injury or trauma to another person or animal by way of bodily contact. In most cases,
+        children are the victims of physical abuse, but adults can also be victims, as in cases of domestic violence or workplace aggression. \n Domestic Violence and Sexual Abuse fall under Physical Abuse. \n
+    There is no point of keeping silent after such incidents. As soon as they happen they call for an alarm. There are emergency contact details which deal with this immediately and post trauma too. Dont make excuses
+    that it happened once there are high chances that it may happen again.</string>
+
+    <string name="topic_textview">Topic</string>
+    <string name="decription_textview">Description Here</string>
+
 </resources>

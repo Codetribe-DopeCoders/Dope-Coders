@@ -126,7 +126,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             startActivity(new Intent(this, AboutActivity.class));
 
         } else if (id == R.id.nav_life_support) {
-            startActivity(new Intent(this, LifeSupport.class));
+            startActivity(new Intent(this, PagerActivity.class));
 
         } else if (id == R.id.nav_about_us) {
             startActivity(new Intent(this, EmotionalAbuse.class));
