@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 public class PagerActivity extends AppCompatActivity {
 
+    int pager_pos = 0;
     private SectionsPagerAdapter mSectionsPagerAdapter;
     /**
      * The {@link ViewPager} that will host the section contents.
@@ -31,15 +32,48 @@ public class PagerActivity extends AppCompatActivity {
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
+        mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                pager_pos = position;
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
 
     }
 
     public void LeftClick(View view){
-        Toast.makeText(PagerActivity.this, "Back", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(PagerActivity.this, "Back", Toast.LENGTH_SHORT).show();
+
+        if (pager_pos > 0 ) {
+            pager_pos--;
+            mViewPager.setCurrentItem(pager_pos);
+        }
+
+
+
     }
 
     public void RightClick(View view){
-        Toast.makeText(PagerActivity.this, "Next", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(PagerActivity.this, "Next", Toast.LENGTH_SHORT).show();
+
+        if (pager_pos < 4) {
+            pager_pos++;
+            mViewPager.setCurrentItem(pager_pos);
+        }
+
+
+
+
     }
 
 

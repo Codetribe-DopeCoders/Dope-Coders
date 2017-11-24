@@ -33,6 +33,10 @@
             android:value=".MainActivity" />
 
         <activity
+            android:name=".PagerActivity"
+            android:label="Life Support"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".RegisterActivity"
             android:label="Register"
             android:theme="@style/AppTheme.NoActionBar" />
