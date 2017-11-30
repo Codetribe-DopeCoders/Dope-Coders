@@ -1,36 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:orientation="vertical"
+    tools:context="com.example.codetribe.palliate.Levels">
+
+    <ImageView
+        android:id="@+id/button1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        tools:context="com.example.codetribe.palliate.Levels">
+        android:layout_height="wrap_content"
+        android:layout_weight="0.3"
+        android:src="@drawable/ic_contact_social_worker" />
 
+    <ImageView
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.3"
+        android:src="@drawable/ic_call_counsellor" />
 
-        <ImageView
-                android:id="@+id/magic_button1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.3"
-                android:src="@drawable/ic_contact_social_worker" />
-
-        <ImageView
-                android:id="@+id/magic_button2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.3"
-                android:src="@drawable/ic_call_counsellor" />
-
-
-        <ImageView
-                android:id="@+id/magic_button3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.3"
-                android:src="@drawable/ic_next_of_kin" />
+    <ImageView
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.3"
+        android:src="@drawable/ic_next_of_kin" />
 
 </LinearLayout>
-
-
