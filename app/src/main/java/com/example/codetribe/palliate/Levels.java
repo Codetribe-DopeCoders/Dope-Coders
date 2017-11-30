@@ -18,7 +18,7 @@ import com.google.firebase.database.ValueEventListener;
 public class Levels extends AppCompatActivity {
 
     ImageView socialWorker, counsellor, nextOfKin;
-    String nextOfKinNo1,nextOfKinNo2;
+    String nextOfKin1, nextOfKin2;
 
     FirebaseAuth firebaseAuth;
     ChildEventListener mChildEvLiestiner;
@@ -51,8 +51,8 @@ public class Levels extends AppCompatActivity {
                     uDetails.setmLevelTwoContactTwo(ds.child(userID).getValue(UserDetails.class).getmLevelTwoContactTwo());
 
 
-                    nextOfKinNo1 = uDetails.getmLevelOneContacOne();
-                    nextOfKinNo2 = uDetails.getmLevelTwoContactTwo();
+                    nextOfKin1 = uDetails.getmLevelOneContacOne();
+                    nextOfKin2 = uDetails.getmLevelTwoContactTwo();
                 }
 
             }
@@ -82,7 +82,7 @@ public class Levels extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(android.content.Intent.ACTION_VIEW);
-                i.putExtra("address", nextOfKinNo1+";"+nextOfKinNo2);
+                i.putExtra("address", nextOfKin1 + ";" + nextOfKin2);
                 i.putExtra("sms_body", "Hello, this is an emergency I need your help. please call me as soon as possible!" +
                         "");
                 i.setType("vnd.android-dir/mms-sms");
