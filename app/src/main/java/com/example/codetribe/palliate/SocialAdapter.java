@@ -15,8 +15,9 @@ import java.util.ArrayList;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
+
 /**
- * Created by codetribe on 12/5/2017.
+ * Created by codetribe on 10/4/2017.
  */
 
 public class SocialAdapter extends RecyclerView.Adapter<SocialAdapter.ViewHolder> {
@@ -50,6 +51,7 @@ public class SocialAdapter extends RecyclerView.Adapter<SocialAdapter.ViewHolder
         viewholder.location.setText(socialclass.get(position).getLocation());
         viewholder.profileImage.setImageResource(socialclass.get(position).getImg_id());
         viewholder.viewMore.setText(socialclass.get(position).getMoreDetails());
+
 
 
         viewholder.viewMore.setOnClickListener(new View.OnClickListener() {
@@ -99,16 +101,16 @@ public class SocialAdapter extends RecyclerView.Adapter<SocialAdapter.ViewHolder
 
                 // Your android custom dialog ok action
                 // Action for custom dialog ok button click
-//                info.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//
-//                        Intent inf = new Intent(context, socialWorkerInfo.class);
-//                        context.startActivity(inf);
-//                        // dialog.dismiss();
-//
-//                    }
-//                });
+                info.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        Intent inf = new Intent(context, socialWorkerInfo.class);
+                        context.startActivity(inf);
+                        // dialog.dismiss();
+
+                    }
+                });
 
                 dialog.show();
             }
@@ -239,5 +241,4 @@ public class SocialAdapter extends RecyclerView.Adapter<SocialAdapter.ViewHolder
         }
     }
 }
-
 

@@ -59,7 +59,7 @@ public class Levels extends AppCompatActivity {
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                databaseError.getMessage();
+
             }
         });
 
