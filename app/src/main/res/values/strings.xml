@@ -11,8 +11,8 @@
     <string name="title_activity_support">Support</string>
 
 
-    <string name="red_round_string">SMS next of kin</string>
-    <string name="green_round_string">connect with social worker</string>
+    <string name="red_round_string">SMS Next of Kin</string>
+    <string name="green_round_string">Connect with Social Worker</string>
     <string name="user_profile_string">My Profile</string>
     <string name="lifesupport_string">Tips and Guidelines</string>
     <string name="rehabilitation_string">Rehabilitation Center</string>
@@ -24,7 +24,7 @@
     <string name="logout_string">LogOut</string>
     <string name="password">Password</string>
     <string name="email_address">Email Address</string>
-    <string name="yellow_round_string">Call counsellor</string>
+    <string name="yellow_round_string">Call Counsellor</string>
     <string name="copyright">\u00A9 2017 Dope Coders</string>
 
     <string name="login">Login</string>

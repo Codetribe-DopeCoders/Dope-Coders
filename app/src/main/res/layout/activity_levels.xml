@@ -12,22 +12,40 @@
         android:id="@+id/button1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.3"
-        android:src="@drawable/ic_contact_social_worker"
-        android:onClick="SocialWorker" />
+        android:layout_weight="0.2"
+        android:onClick="SocialWorker"
+        android:src="@drawable/ic_contact_social_worker" />
+    <TextView
+          android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+         android:gravity="center"
+          android:padding="8dp"
+           android:text="@string/green_round_string"/>
 
     <ImageView
         android:id="@+id/button2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.3"
+        android:layout_weight="0.2"
         android:src="@drawable/ic_call_counsellor" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/yellow_round_string"/>
 
     <ImageView
         android:id="@+id/button3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.3"
+        android:layout_weight="0.2"
         android:src="@drawable/ic_next_of_kin" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/red_round_string"/>
 
 </LinearLayout>
