@@ -74,9 +74,14 @@
             android:name=".AppActivity"
             android:label="App Info"
             android:parentActivityName=".AboutActivity" />
-        <activity android:name=".Levels" />
-        <activity android:name=".SocialWork" />
-        <activity android:name=".socialWorkerInfo"></activity>
+        <activity
+            android:name=".Levels"
+            android:parentActivityName=".HomeActivity" />
+        <activity
+            android:name=".SocialWork"
+            android:parentActivityName=".Levels" />
+        <activity android:name=".socialWorkerInfo" />
+        <activity android:name=".SupportCentres"></activity>
     </application>
 
 </manifest>
