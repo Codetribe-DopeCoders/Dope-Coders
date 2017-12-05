@@ -53,11 +53,6 @@
             android:label="Help"
             android:parentActivityName=".HomeActivity" />
         <activity
-            android:name=".Support"
-            android:label="Life Support"
-            android:parentActivityName=".HomeActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".EmotionalAbuse"
             android:label="Live Chat"
             android:parentActivityName=".HomeActivity" />
@@ -79,7 +74,9 @@
             android:name=".AppActivity"
             android:label="App Info"
             android:parentActivityName=".AboutActivity" />
-        <activity android:name=".Levels"></activity>
+        <activity android:name=".Levels" />
+        <activity android:name=".SocialWork" />
+        <activity android:name=".socialWorkerInfo"></activity>
     </application>
 
 </manifest>

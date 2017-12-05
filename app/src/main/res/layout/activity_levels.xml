@@ -13,7 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.3"
-        android:src="@drawable/ic_contact_social_worker" />
+        android:src="@drawable/ic_contact_social_worker"
+        android:onClick="SocialWorker" />
 
     <ImageView
         android:id="@+id/button2"

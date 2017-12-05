@@ -63,17 +63,12 @@ public class Levels extends AppCompatActivity {
             }
         });
 
-        socialWorker.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
 
 
         counsellor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
 
             }
         });
@@ -89,5 +84,11 @@ public class Levels extends AppCompatActivity {
                 startActivity(i);
             }
         });
+    }
+
+    public void SocialWorker(View view) {
+        Intent intent = new Intent(this, SocialWork.class);
+        startActivity(intent);
+
     }
 }

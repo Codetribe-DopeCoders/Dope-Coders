@@ -35,6 +35,10 @@
     <string name="title_activity_about">About</string>
 
 
+    <string name="name">name</string>
+    <string name="occupation">occupation</string>
+    <string name="location">location</string>
+    <string name="more">view more</string>
     <string name="topic_one">Child Abuse</string>
     <string name="topic_two">Depression</string>
     <string name="topic_three">Emotional Abuse</string>
