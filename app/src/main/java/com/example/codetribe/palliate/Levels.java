@@ -24,7 +24,7 @@ public class Levels extends AppCompatActivity {
     ChildEventListener mChildEvLiestiner;
     private DatabaseReference mDatabaseReference;
     private FirebaseDatabase mFirebaseDatabase;
-    private FirebaseAuth.AuthStateListener mAuthListiner;
+
     private String userID;
 
     @Override
@@ -42,26 +42,26 @@ public class Levels extends AppCompatActivity {
         counsellor = (ImageView) findViewById(R.id.button2);
         nextOfKin = (ImageView) findViewById(R.id.button3);
 
-        mDatabaseReference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                for (DataSnapshot ds: dataSnapshot.getChildren()){
-                    UserDetails uDetails = new UserDetails();
-                    uDetails.setmLevelOneContacOne(ds.child(userID).getValue(UserDetails.class).getmLevelOneContacOne());
-                    uDetails.setmLevelTwoContactTwo(ds.child(userID).getValue(UserDetails.class).getmLevelTwoContactTwo());
-
-
-                    nextOfKin1 = uDetails.getmLevelOneContacOne();
-                    nextOfKin2 = uDetails.getmLevelTwoContactTwo();
-                }
-
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-                databaseError.getMessage();
-            }
-        });
+//        mDatabaseReference.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                for (DataSnapshot ds: dataSnapshot.getChildren()){
+//                    UserDetails uDetails = new UserDetails();
+//                    uDetails.setmLevelOneContacOne(ds.child(userID).getValue(UserDetails.class).getmLevelOneContacOne());
+//                    uDetails.setmLevelTwoContactTwo(ds.child(userID).getValue(UserDetails.class).getmLevelTwoContactTwo());
+//
+//
+//                    nextOfKin1 = uDetails.getmLevelOneContacOne();
+//                    nextOfKin2 = uDetails.getmLevelTwoContactTwo();
+//                }
+//
+//            }
+//
+//            @Override
+//            public void onCancelled(DatabaseError databaseError) {
+//                databaseError.getMessage();
+//            }
+//        });
 
 
 
