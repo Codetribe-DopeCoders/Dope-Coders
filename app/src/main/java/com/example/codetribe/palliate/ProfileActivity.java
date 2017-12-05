@@ -10,13 +10,18 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -42,6 +47,10 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     private FirebaseUser firebaseUser;
     private FirebaseAuth firebaseAuth;
 
+    UserDetails user;
+    private TextView displayName;
+
+
     //upload pic
     private FloatingActionButton uploadPic;
     private StorageReference storageReference;
@@ -59,7 +68,9 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
 
 
         firebaseUser = firebaseAuth.getInstance().getCurrentUser();
+        String uid = firebaseUser.getUid();
 
+        databaseReference = firebaseDatabase.getReference().child("User").child(uid);
 
         editName = (EditText) findViewById(R.id.register_name);
         editEmailAddress = (EditText) findViewById(R.id.register_email);
@@ -69,6 +80,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         editNextOfKin2 = (EditText) findViewById(R.id.nexofkin_contact2);
         buttonSubmit = (Button) findViewById(R.id.submit);
 
+        displayName =  (TextView) findViewById(R.id.user_name);
         //upload pic
         uploadPic = (FloatingActionButton) findViewById(R.id.image_camera);
         userImage = (CircleImageView) findViewById(R.id.userpic);
@@ -76,6 +88,34 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         buttonSubmit.setOnClickListener(this);
         uploadPic.setOnClickListener(this);
 
+        //extract data
+
+        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                user = dataSnapshot.getValue(UserDetails.class);
+
+                editName.setText(user.getmUserName());
+                editEmailAddress.setText(user.getmMail());
+                editContact.setText(user.getmContactNumber());
+                editPassword.setText(user.getmPasswors());
+                editNextOfKin1.setText(user.getmLevelOneContacOne());
+                editNextOfKin2.setText(user.getmLevelTwoContactTwo());
+                displayName.setText(user.getmUserName());
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+        if(firebaseUser.getPhotoUrl() != null ){
+
+            String url = firebaseUser.getPhotoUrl().toString();
+            Glide.with(getApplicationContext()).load(url).into(userImage);
+        }
     }
 
 
