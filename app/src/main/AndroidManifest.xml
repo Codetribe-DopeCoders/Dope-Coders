@@ -58,10 +58,6 @@
             android:parentActivityName=".HomeActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Levels"
-            android:label="Options"
-            android:parentActivityName=".HomeActivity" />
-        <activity
             android:name=".EmotionalAbuse"
             android:label="Live Chat"
             android:parentActivityName=".HomeActivity" />
@@ -82,7 +78,8 @@
         <activity
             android:name=".AppActivity"
             android:label="App Info"
-            android:parentActivityName=".AboutActivity"></activity>
+            android:parentActivityName=".AboutActivity" />
+        <activity android:name=".Levels"></activity>
     </application>
 
 </manifest>
