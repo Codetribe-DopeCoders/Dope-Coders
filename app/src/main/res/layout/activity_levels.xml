@@ -7,20 +7,7 @@
     android:layout_weight="1"
     android:orientation="vertical"
     tools:context="com.example.codetribe.palliate.Levels">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:gravity="center"
-        android:id="@+id/user_name"
-        android:layout_centerHorizontal="true"
-        android:textColor="@android:color/white"
-        android:textSize="30sp"
-        android:fontFamily="sans-serif"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="28dp" />
+
     <ImageView
         android:id="@+id/button1"
         android:layout_width="match_parent"
