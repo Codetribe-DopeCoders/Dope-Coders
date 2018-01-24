@@ -98,17 +98,7 @@ missing person. \n\n
 Palliate, meaning a helping hand, is an app which victims can connect with
 social workers and someone who can quickly provide them with
 counselling. The application helps after the victim has experienced the
-abuse. You need to register first, then the user has to update the profile
-because some information is not on the registration form. You can also add
-your image to personalize your profile. You can update your profile on the
-navigation bar, user can get Tips and guidelines, support chat for two
-different types of abuse (physical and emotional abuse). Event is a function
-for future, users will be able to view if there are any events regarding abuse
-or any workshops related.\n\n
-On the landing screen the user will encounter three buttons. 1. Call a Social
-Worker 2. Call a Counselor 3. Sms(text) your next of kin, the one you
-added when updating profile.
-The user can logout from the app.</string>
+abuse.</string>
 
     <string name="about_app_info">About App</string>
     <string name="contact_us">Contact Us</string>

@@ -26,6 +26,7 @@ public class Levels extends AppCompatActivity {
     private FirebaseDatabase mFirebaseDatabase;
     private FirebaseAuth.AuthStateListener mAuthListiner;
     private String userID;
+    private FirebaseUser firebaseUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,35 +36,30 @@ public class Levels extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
         mFirebaseDatabase = FirebaseDatabase.getInstance();
         mDatabaseReference = mFirebaseDatabase.getReference().child("User");
-        FirebaseUser user = firebaseAuth.getCurrentUser();
-        userID = user.getUid();
+        firebaseUser = firebaseAuth.getInstance().getCurrentUser();
+        userID = firebaseUser.getUid();
 
+        mDatabaseReference = mFirebaseDatabase.getReference().child("User").child(userID);
         socialWorker = (ImageView) findViewById(R.id.button1);
         counsellor = (ImageView) findViewById(R.id.button2);
         nextOfKin = (ImageView) findViewById(R.id.button3);
 
-        mDatabaseReference.addValueEventListener(new ValueEventListener() {
+        mDatabaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                for (DataSnapshot ds: dataSnapshot.getChildren()){
-                    UserDetails uDetails = new UserDetails();
-                    uDetails.setmLevelOneContacOne(ds.child(userID).getValue(UserDetails.class).getmLevelOneContacOne());
-                    uDetails.setmLevelTwoContactTwo(ds.child(userID).getValue(UserDetails.class).getmLevelTwoContactTwo());
 
+               UserDetails user = dataSnapshot.getValue(UserDetails.class);
 
-                    nextOfKin1 = uDetails.getmLevelOneContacOne();
-                    nextOfKin2 = uDetails.getmLevelTwoContactTwo();
-                }
+               nextOfKin1 = user.getmLevelOneContacOne();
+               nextOfKin2 = user.getmLevelTwoContactTwo();
 
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                databaseError.getMessage();
+
             }
         });
-
-
 
         counsellor.setOnClickListener(new View.OnClickListener() {
             @Override

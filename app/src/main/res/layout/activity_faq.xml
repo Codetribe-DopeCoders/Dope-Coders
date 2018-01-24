@@ -95,12 +95,13 @@
             app:civ_border_color="#fff"
             app:civ_border_width="2dp"
             />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/dev4"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
         <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="150dp"
             android:layout_height="150dp"
@@ -117,7 +118,18 @@
             android:gravity="center"
             android:text="@string/dev5"
             android:textStyle="bold"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:text="@string/copyright" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="All rights reserved." />
 
     </LinearLayout>
 </ScrollView>
