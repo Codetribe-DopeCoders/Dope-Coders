@@ -132,7 +132,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             startActivity(new Intent(this, EmotionalAbuse.class));
 
         } else if (id == R.id.nav_rehab) {
-            startActivity(new Intent(this, SocialWork.class));
+            startActivity(new Intent(this, RehabilitationCentres.class));
 
 
         } else if (id == R.id.nav_physical_abuse) {

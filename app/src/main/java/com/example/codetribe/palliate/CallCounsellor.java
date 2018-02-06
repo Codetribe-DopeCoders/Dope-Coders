@@ -19,7 +19,7 @@ public class CallCounsellor extends AppCompatActivity {
             "Social Development Substance Abuse Line",
             "Police and Trauma Line",
             "Suicide Crisis Line",
-            "The South African Depression and Anxiety Group",
+            "South African Depression & Anxiety Group",
             "Cell phone emergency",
             "FAMSA – The Family and Marriage Association of South Africa",
             "Ambulance response"};

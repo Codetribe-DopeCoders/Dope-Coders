@@ -56,31 +56,51 @@
             android:name=".EmotionalAbuse"
             android:label="Live Chat"
             android:parentActivityName=".HomeActivity" />
+
+        <activity
+            android:name=".RehabilitationCentres"
+            android:label="Support Centres"
+            android:parentActivityName=".HomeActivity" />
+
         <activity android:name=".PhysicalAbuse" />
+
         <activity android:name=".ResetActivity" />
+
         <activity
             android:name=".AboutActivity"
             android:label="Help"
             android:parentActivityName=".HomeActivity" />
+
         <activity
             android:name=".FaqActivity"
             android:label="About Us"
             android:parentActivityName=".AboutActivity" />
+
         <activity
             android:name=".Contact"
             android:label="Contact Us"
             android:parentActivityName=".AboutActivity" />
+
         <activity
             android:name=".AppActivity"
             android:label="App Info"
             android:parentActivityName=".AboutActivity" />
+
         <activity
             android:name=".Levels"
             android:parentActivityName=".HomeActivity" />
+
         <activity
             android:name=".SocialWork"
             android:parentActivityName=".Levels" />
+
+        <activity
+            android:name=".CallCounsellor"
+            android:parentActivityName=".Levels" />
+
         <activity android:name=".socialWorkerInfo" />
+
+
         <activity android:name=".SupportCentres"></activity>
     </application>
 

@@ -61,13 +61,13 @@ public class Levels extends AppCompatActivity {
             }
         });
 
-        counsellor.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-
-            }
-        });
+//        counsellor.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(Levels.this,CallCounsellor.class);
+//                startActivity(intent);
+//            }
+//        });
 
         nextOfKin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,6 +84,12 @@ public class Levels extends AppCompatActivity {
 
     public void SocialWorker(View view) {
         Intent intent = new Intent(this, SocialWork.class);
+        startActivity(intent);
+
+    }
+
+    public void CallCounsellor(View view) {
+        Intent intent = new Intent(this, CallCounsellor.class);
         startActivity(intent);
 
     }
