@@ -57,7 +57,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonReset.setOnClickListener(this);
         buttonRegister.setOnClickListener(this);
 
-
         mProgressView = findViewById(R.id.login_progress);
         mLoginFormView = findViewById(R.id.login_form);
 
@@ -90,13 +89,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     finish();
                     startActivity(new Intent(getApplicationContext(), HomeActivity.class));
                 } else {
-                    Toast.makeText(getParent().getBaseContext(), "Error " + task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Error " + task.getException().getMessage(), Toast.LENGTH_LONG).show();
                 }
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                Toast.makeText(getParent().getBaseContext(), "Error " + e.getMessage(), Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Error " + e.getMessage(), Toast.LENGTH_LONG).show();
             }
         });
     }

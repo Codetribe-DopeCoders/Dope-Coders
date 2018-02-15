@@ -34,6 +34,9 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ProfileActivity extends AppCompatActivity implements View.OnClickListener {
 
+    private static final int GALLERY_INTENT = 2;
+    DatabaseReference databaseReference;
+    UserDetails user;
     private EditText editName;
     private EditText editEmailAddress;
     private EditText editContact;
@@ -41,20 +44,14 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     private EditText editNextOfKin1;
     private EditText editNextOfKin2;
     private Button buttonSubmit;
-    DatabaseReference databaseReference;
     private ProgressDialog progressDialog;
     private FirebaseDatabase firebaseDatabase;
     private FirebaseUser firebaseUser;
     private FirebaseAuth firebaseAuth;
-
-    UserDetails user;
     private TextView displayName;
-
-
     //upload pic
     private FloatingActionButton uploadPic;
     private StorageReference storageReference;
-    private static final int GALLERY_INTENT = 2;
     private CircleImageView userImage;
 
 
@@ -129,8 +126,6 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
 
         }
 
-
-
         String name = editName.getText().toString();
         final String email = editEmailAddress.getText().toString();
         String contact = editContact.getText().toString();
@@ -152,10 +147,8 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         }
 
         if (TextUtils.isEmpty(contact)) {
-
             Toast.makeText(getApplicationContext(), "please, enter your contact number", Toast.LENGTH_SHORT).show();
             return;
-
         }
 
         if (TextUtils.isEmpty(nextOfKin1)) {
@@ -190,12 +183,8 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
 
             String uid = firebaseUser.getUid();
 
-
             databaseReference = databaseReference.getRef().child("User");
 
-            //public UserDetails(String mUserName, String mMail, String mPasswors, String mContactNumber, String mLevelOneContacOne, String mLevelTwoContactTwo)
-
-            // (String firstName, String lastName, String emailAddress, String location, String identity, String gender, String password, String confirmPassword
             UserDetails userDetails = new UserDetails(name, email, contact, password, nextOfKin1, nextOfNext2);
             Map<String, Object> updateUser = new HashMap<>();
 

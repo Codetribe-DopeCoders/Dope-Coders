@@ -22,11 +22,10 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class SocialAdapter extends RecyclerView.Adapter<SocialAdapter.ViewHolder> {
 
-    private ArrayList<SocialClass> socialclass;
-    private Context context;
-    // private Context context;
-
     private static int currentPosition = 0;
+    private ArrayList<SocialClass> socialclass;
+    // private Context context;
+    private Context context;
 
     public SocialAdapter(ArrayList<SocialClass> socialclas) {
 
@@ -107,21 +106,16 @@ public class SocialAdapter extends RecyclerView.Adapter<SocialAdapter.ViewHolder
 
                         Intent inf = new Intent(context, socialWorkerInfo.class);
                         context.startActivity(inf);
-                        // dialog.dismiss();
-
                     }
                 });
-
                 dialog.show();
             }
 
         });
 
-
         viewholder.profileImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
 
                 // custom dialog
                 final Dialog dialog = new Dialog(context);
@@ -152,6 +146,7 @@ public class SocialAdapter extends RecyclerView.Adapter<SocialAdapter.ViewHolder
                         intent.putExtra(Intent.EXTRA_EMAIL, "mmary1477@gmail.com");
                         // intent.putExtra(Intent.EXTRA_SUBJECT, "coffee order for : "+ userName );
                         // intent.putExtra(Intent.EXTRA_TEXT, name );
+
                     }
                 });
 
@@ -179,35 +174,6 @@ public class SocialAdapter extends RecyclerView.Adapter<SocialAdapter.ViewHolder
             }
 
         });
-
-//        //Glide
-//        Glide.with(context).load(socialclass.get(position).getImg_id()).into(viewholder.profileImage);
-//        viewholder.linearLayout.setVisibility(View.GONE);
-//
-//        //if position equals the item clicked
-//        if (currentPosition == position)
-//        {
-//            Animation slideDown = AnimationUtils.loadAnimation(context,R.anim.animation);
-//
-//            // toggling view visibility
-//            viewholder.linearLayout.setVisibility(View.VISIBLE);
-//
-//            // adding sliding effects
-//            viewholder.linearLayout.startAnimation(slideDown);
-//        }
-//
-//        viewholder.viewMore.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//
-//                //expand the clicked item
-//                currentPosition = position;
-//
-//                //reloading the list
-//                notifyDataSetChanged();
-//            }
-//        });
-
     }
 
     @Override
@@ -216,14 +182,13 @@ public class SocialAdapter extends RecyclerView.Adapter<SocialAdapter.ViewHolder
         return socialclass.size();
     }
 
-
     public class ViewHolder extends RecyclerView.ViewHolder {
 
+        LinearLayout linearLayout;
         private TextView name;
         private TextView occupation;
         private TextView location;
         private CircleImageView profileImage;
-        LinearLayout linearLayout;
         private TextView viewMore;
 
         public ViewHolder(View view) {
