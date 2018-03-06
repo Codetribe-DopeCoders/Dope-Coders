@@ -12,14 +12,49 @@ public class SocialClass {
     private String location;
     private int img_id;
     private String moreDetails;
+    private String infoDetails;
+    private String phoneNumber;
+    private String emailDetails;
 
-    public SocialClass(String name, String occupation, String location, int img_id, String moreDetails) {
+    public SocialClass(String name, String occupation, String location, int img_id, String moreDetails, String infoDetails, String phoneNumber, String emailDetails) {
         this.name = name;
         this.occupation = occupation;
         this.location = location;
         this.img_id = img_id;
         this.moreDetails = moreDetails;
+        this.infoDetails = infoDetails;
+        this.phoneNumber = phoneNumber;
+        this.emailDetails = emailDetails;
     }
+
+    public String getEmailDetails() {
+        return emailDetails;
+    }
+
+    public void setEmailDetails(String emailDetails) {
+        this.emailDetails = emailDetails;
+    }
+
+
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+
+
+    public String getInfoDetails() {
+        return infoDetails;
+    }
+
+    public void setInfoDetails(String infoDetails) {
+        this.infoDetails = infoDetails;
+    }
+
 
     public String getMoreDetails() {
         return moreDetails;
